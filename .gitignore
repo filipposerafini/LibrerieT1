@@ -184,3 +184,4 @@ FakesAssemblies/
 *.sln
 LibrerieT1.vcxproj
 *.filters
+main.c
