@@ -13,7 +13,7 @@ boolean empty(list l)
 		return FALSE;
 }
 
-element head(list l)
+type_list head(list l)
 {
 	if (empty(l)) 
 		abort(); //TODO errore accesso invalido
@@ -29,7 +29,7 @@ list tail(list l)
 		return l->next;
 }
 
-list cons(element el, list l)
+list cons(type_list el, list l)
 {
 	list t;
 	t = (list)malloc(sizeof(node));
@@ -64,7 +64,7 @@ void showList(list l)
 	printf("]\n");
 }
 
-boolean inList(element el, list l)
+boolean inList(type_list el, list l)
 {
 	while (!empty(l)) 
 	{
@@ -109,4 +109,120 @@ list reverseList(list l)
 		return emptyList();
 	else 
 		return appendList(reverseList(tail(l)), cons(head(l), emptyList()));
+}
+
+list deleteNode(type_list el, list l) 
+{
+	if (empty(l))
+		return emptyList();
+	else if (el == head(l)) 
+		return copyList(tail(l));
+	else 
+		return cons(head(l), deleteNode(el, tail(l)));
+}
+
+list subList(int n, list l)
+{
+	int i = 0;
+	while ((l != NULL) && (i < n))
+	{
+		l = l->next; 
+		i++;
+	}
+	return l;
+}
+
+/* void sortList(list* l)
+* -----------------------
+* Implementazione di mergeSort per le linked lists.
+* Non crea una copia della lista ma la ordina e basta
+*
+*/
+void sortList(list* l)
+{
+	list a, b, head = *l;
+
+	//Caso base: la lista è vuota o ha un elemento solo, quindi è già ordinata :)
+	if (empty(*l) || tail(*l) == NULL)
+	{
+		return;
+	}
+	else
+	{
+		//dividi
+		splitList(head, &a, &b);
+		//et impera
+		sortList(&a);
+		sortList(&b);
+
+		//Merge delle liste ordinate nella lista originale
+		*l = mergeList(a, b);
+	}
+}
+
+list mergeList(list a, list b)
+{
+	list merged = emptyList();
+
+	/* Caso base: se una delle due liste è vuota, l'unione è l'altra */
+	if (empty(a))
+		return b;
+	else if (empty(b))
+		return a;
+
+	/* PER ORDINARE  */
+	if (type_listCompare(head(a), head(b)) <= 0)
+	{
+		merged = a;
+		merged->next = mergeList(tail(a), b);
+	}
+	else
+	{
+		merged = b;
+		merged->next = mergeList(a, tail(b));
+	}
+	return merged;
+}
+
+/* void splitList(list l, list* prima, list* seconda)
+* --------------------------------------------------
+* Prende come argomenti la lista originale @l, e due liste (@prima e @seconda) per riferimento.
+* La funzione divide la lista originale in due metà separate, che verranno inserite in @prima e @seconda.
+*/
+void splitList(list l, list* prima, list* seconda)
+{
+	list veloce;
+	list lento;
+	if (empty(l) || empty(tail(l)))
+	{
+		*prima = l;
+		*seconda = emptyList();
+	}
+	else
+	{
+		lento = l;
+		veloce = tail(l);
+
+		/* 'veloce' avanza di 2 nodi, 'lento' avanza di 1 nodo.
+		Così quando 'veloce' sarà giunto alla fine, 'lento' sarà a metà.*/
+
+		while (!empty(veloce))
+		{
+			veloce = tail(veloce);
+			if (!empty(veloce))
+			{
+				lento = tail(lento);
+				veloce = tail(veloce);
+			}
+		}
+
+		//la prima metà inizia dall'inizio (l)
+		//la seconda metà inizia dopo il puntatore lento.
+
+		*prima = l;
+		*seconda = tail(lento);
+
+		//Le due metà vengono divise eliminando il collegamento tra di esse
+		lento->next = NULL;
+	}
 }
