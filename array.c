@@ -66,7 +66,7 @@ int findMin( type_arr arr[], int dim )
     int i, posMin=0;
     
     for (i=1; i<dim; i++)
-        if ( type_arrCompare(arr[posMax], arr[i]) > 0 ) posMin=i;
+        if ( type_arrCompare(arr[posMin], arr[i]) > 0 ) posMin=i;
     return posMin;
 }
 
