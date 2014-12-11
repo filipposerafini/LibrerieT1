@@ -9,5 +9,4 @@ FILE* openFileWrite(char* nomeFile);
 
 int readField(char buffer[], char sep, FILE *f);
 
-
 #endif

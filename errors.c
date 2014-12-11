@@ -2,8 +2,6 @@
 #include <stdlib.h>
 #include "errors.h"
 
-
-
 char* errorMessages[] =
 {
     "",
@@ -13,7 +11,6 @@ char* errorMessages[] =
     "Errore nell'apertura del file in lettura\n",
     "Tentativo di accesso a una lista vuota\n",
 };
-
 
 int handleError(int err)
 {

@@ -33,9 +33,7 @@ FILE* openFileWrite(char* nomeFile)
     return fp;
 }
 
-
 //LETTURA
-
 int readField(char buffer[], char sep, FILE *f)
 {
     int i = 0;

@@ -29,5 +29,4 @@ void type_arrFPrint(FILE* stream, type_arr a);
 void type_listPrint(type_arr a);
 void type_listFPrint(FILE* stream, type_arr a);
 
-
 #endif

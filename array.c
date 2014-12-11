@@ -59,8 +59,6 @@ int findMax( type_arr arr[], int dim )
     return posMax;
 }
 
-
-
 int findMin( type_arr arr[], int dim )
 {
     int i, posMin=0;
@@ -90,11 +88,13 @@ boolean compareEquals(type_arr arr1[], int dim1, type_arr arr2[], int dim2)
 
 boolean compareUnordered(type_arr arr1[], int dim1, type_arr arr2[], int dim2)
 {
-    boolean alreadyChecked[dim1];
+    boolean *alreadyChecked;
     boolean uguali = TRUE;
     int i, j;
     
     if (dim1 != dim2) return FALSE;
+
+	alreadyChecked = (boolean*)malloc(dim1 * sizeof(boolean));
     
     for (i = 0; i < dim1; i++)
         alreadyChecked[i] = FALSE;
@@ -116,6 +116,7 @@ boolean compareUnordered(type_arr arr1[], int dim1, type_arr arr2[], int dim2)
         }
     }
     
+	free(alreadyChecked);
     return uguali;
 }
 
@@ -129,7 +130,6 @@ void naiveSort(int arr[], int dim)
         dim--;
     }
 }
-
 
 void quickSort(int a[], int dim)
 {
@@ -167,7 +167,6 @@ void quickSortR(int a[], int iniz, int fine)
     }
 }
 
-
 void showArray(type_arr arr[], int dim)
 {
     int i;
@@ -176,4 +175,3 @@ void showArray(type_arr arr[], int dim)
         type_arrPrint(arr[i]);
     }
 }
-

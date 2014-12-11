@@ -1,6 +1,5 @@
 #include "common.h"
 
-
 int type_arrCompare(type_arr a, type_arr b)
 {
     //Per i numeri e i char..
@@ -8,7 +7,6 @@ int type_arrCompare(type_arr a, type_arr b)
     
     //Per le stringhe
     // return strcmp(a, b);
-    
 }
 
 boolean type_arrEquals(type_arr a, type_arr b)
@@ -23,7 +21,7 @@ void type_arrSwap(type_arr *a, type_arr *b)
     *b = temp;
 }
 
-int type_listCompare(type_list a, type_list b)
+type_list type_listCompare(type_list a, type_list b)
 {
     //Per i numeri e i char..
     return a-b;
@@ -40,15 +38,12 @@ boolean type_listEquals(type_list a, type_list b)
 
 void type_listSwap(type_list *a, type_list *b)
 {
-    type_arr temp = *a;
+    type_list temp = *a;
     *a = *b;
     *b = temp;
 }
 
-
-
 //Funzioni di output
-
 void type_listFPrint(FILE* f, type_list a)
 {
     fprintf(f, FORMAT_TL, a);
@@ -68,4 +63,3 @@ void type_arrPrint(type_arr a)
 {
     type_arrFPrint(stdout, a);
 }
-
