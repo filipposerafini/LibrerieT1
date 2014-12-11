@@ -68,7 +68,7 @@ void showList(list l)
 	printf("[");
 	while (!empty(l)) 
 	{
-		printf(FORMAT_TL, head(l));
+		type_listPrint( head(l) );
 		l = tail(l);
 		if (!empty(l)) 
 			printf(", ");

@@ -23,6 +23,8 @@ void naiveSort(int arr[], int dim);
 void quickSort(int a[], int dim);
 void quickSortR(int a[], int iniz, int fine);
 
+//Altro
+void showArray(type_arr arr[], int dim);
 
 
 

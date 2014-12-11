@@ -5,9 +5,10 @@
 
 
 #define MALLOC_ERR 1
-#define FOPEN_W_ERR 2
-#define FOPEN_R_ERR 3
-#define INVALID_ACCESS 4
+#define FOPEN_ERR 2
+#define FOPEN_W_ERR 3
+#define FOPEN_R_ERR 4
+#define INVALID_ACCESS 5
 
 int handleError(int err);
 int exitWithError(int err);

@@ -45,3 +45,27 @@ void type_listSwap(type_list *a, type_list *b)
     *b = temp;
 }
 
+
+
+//Funzioni di output
+
+void type_listFPrint(FILE* f, type_list a)
+{
+    fprintf(f, FORMAT_TL, a);
+}
+
+void type_arrFPrint(FILE* f, type_arr a)
+{
+    fprintf(f, FORMAT_TA, a);
+    fflush(f);
+}
+
+void type_listPrint(type_list a)
+{
+    type_listFPrint(stdout, a);
+}
+void type_arrPrint(type_arr a)
+{
+    type_arrFPrint(stdout, a);
+}
+

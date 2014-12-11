@@ -166,3 +166,14 @@ void quickSortR(int a[], int iniz, int fine)
             quickSortR(a, iPivot + 1, fine);
     }
 }
+
+
+void showArray(type_arr arr[], int dim)
+{
+    int i;
+    for (i = 0; i < dim; i++)
+    {
+        type_arrPrint(arr[i]);
+    }
+}
+
