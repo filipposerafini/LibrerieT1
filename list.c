@@ -144,6 +144,38 @@ list subList(int n, list l)
 	return l;
 }
 
+list intersectList(list l1, list l2)
+{
+	type_list cur;
+	list intersection = emptyList();
+	while (!empty(l1))
+	{
+		cur = head(l1);
+		if (inList(cur, l2) && !inList(cur, intersection))
+			intersection = cons(cur, intersection);
+		l1 = tail(l1);
+	}
+	return intersection;
+}
+
+list diffList(list l1, list l2) {
+	type_list cur;
+	list difference = NULL, temp;
+	while (!empty(l1))
+	{
+		cur = head(l1);
+		if (!inList(cur,l2) && !inList(cur, difference))
+		{
+			temp = (list)malloc(sizeof(node));
+			temp->value = cur;
+			temp->next = difference;
+			difference = temp;
+		}
+		l1 = tail(l1);
+	}
+	return difference;
+}
+
 /* void sortList(list* l)
 * -----------------------
 * Implementazione di mergeSort per le liste.
