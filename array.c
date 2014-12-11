@@ -63,11 +63,11 @@ int findMax( type_arr arr[], int dim )
 
 int findMin( type_arr arr[], int dim )
 {
-    int i, posMax=0;
+    int i, posMin=0;
     
     for (i=1; i<dim; i++)
-        if ( type_arrCompare(arr[posMax], arr[i]) > 0 ) posMax=i;
-    return posMax;
+        if ( type_arrCompare(arr[posMax], arr[i]) > 0 ) posMin=i;
+    return posMin;
 }
 
 //Confronto
@@ -148,13 +148,13 @@ void quickSortR(int a[], int iniz, int fine)
         pivot = a[iPivot];
         do /* trova la posizione del pivot */
         {
-            while (i < j && a[i] <= pivot) i++;
-            while (j > i && a[j] >= pivot) j--;
+            while (i < j && type_arrCompare(a[i], pivot) <= 0) i++;
+            while (j > i && type_arrCompare(a[j], pivot)>=0) j--;
             if (i < j) type_arrSwap(&a[i], &a[j]);
         }
         while (i < j);
         /* posiziona il pivot */
-        if (i != iPivot && a[i] != a[iPivot])
+        if (i != iPivot && type_arrCompare(a[i],a[iPivot]) != 0)
         {
             type_arrSwap(&a[i], &a[iPivot]);
             iPivot = i;
