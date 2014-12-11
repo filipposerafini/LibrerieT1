@@ -15,16 +15,24 @@ boolean empty(list l)
 
 type_list head(list l)
 {
-	if (empty(l)) 
-		abort(); //TODO errore accesso invalido
-	else 
+	if (empty(l))
+    {
+        handleError(INVALID_ACCESS);
+        exit(INVALID_ACCESS);
+    }
+	else
+    {
 		return l->value;
+    }
 }
 
 list tail(list l)
 {
 	if (empty(l))
-		abort(); //TODO
+    {
+        handleError(INVALID_ACCESS);
+        exit(INVALID_ACCESS);
+    }
 	else 
 		return l->next;
 }
@@ -34,7 +42,11 @@ list cons(type_list el, list l)
 	list t;
 	t = (list)malloc(sizeof(node));
 	if (t == NULL)
-		abort(); //TODO
+    {
+        handleError(INVALID_ACCESS);
+        exit(INVALID_ACCESS);
+    }
+    
 	t->value = el;
 	t->next = l;
 	return t;
@@ -134,16 +146,16 @@ list subList(int n, list l)
 
 /* void sortList(list* l)
 * -----------------------
-* Implementazione di mergeSort per le linked lists.
+* Implementazione di mergeSort per le liste.
 * Non crea una copia della lista ma la ordina e basta
-*
+* Non alloca ne libera alcuna memoria e ha velocitˆ O( n*logn )
 */
 void sortList(list* l)
 {
 	list a, b, head = *l;
 
-	//Caso base: la lista è vuota o ha un elemento solo, quindi è già ordinata :)
-	if (empty(*l) || tail(*l) == NULL)
+	//Caso base: la lista e' vuota o ha un elemento solo, quindi e' gia' ordinata :)
+	if (empty(*l) || empty(tail(*l)))
 	{
 		return;
 	}
@@ -164,7 +176,7 @@ list mergeList(list a, list b)
 {
 	list merged = emptyList();
 
-	/* Caso base: se una delle due liste è vuota, l'unione è l'altra */
+	/* Caso base: se una delle due liste e' vuota, l'unione e' l'altra */
 	if (empty(a))
 		return b;
 	else if (empty(b))
@@ -187,7 +199,7 @@ list mergeList(list a, list b)
 /* void splitList(list l, list* prima, list* seconda)
 * --------------------------------------------------
 * Prende come argomenti la lista originale @l, e due liste (@prima e @seconda) per riferimento.
-* La funzione divide la lista originale in due metà separate, che verranno inserite in @prima e @seconda.
+* La funzione divide la lista originale in due meta' separate, che verranno inserite in @prima e @seconda.
 */
 void splitList(list l, list* prima, list* seconda)
 {
@@ -204,7 +216,7 @@ void splitList(list l, list* prima, list* seconda)
 		veloce = tail(l);
 
 		/* 'veloce' avanza di 2 nodi, 'lento' avanza di 1 nodo.
-		Così quando 'veloce' sarà giunto alla fine, 'lento' sarà a metà.*/
+		Cosi' quando 'veloce' sara' giunto alla fine, 'lento' sara' a meta'.*/
 
 		while (!empty(veloce))
 		{
@@ -216,13 +228,13 @@ void splitList(list l, list* prima, list* seconda)
 			}
 		}
 
-		//la prima metà inizia dall'inizio (l)
-		//la seconda metà inizia dopo il puntatore lento.
+		//la prima meta' inizia dall'inizio (l)
+		//la seconda meta' inizia dopo il puntatore lento.
 
 		*prima = l;
 		*seconda = tail(lento);
 
-		//Le due metà vengono divise eliminando il collegamento tra di esse
+		//Le due meta' vengono divise eliminando il collegamento tra di esse
 		lento->next = NULL;
 	}
 }

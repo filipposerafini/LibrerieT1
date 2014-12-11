@@ -29,7 +29,7 @@ list reverseList(list l); //Crea una copia della lista con l'ordine inverso
 list deleteNode(type_list el, list l); //Crea una nuova lista senza l'elemento el
 list subList(int n, list l); //Restituisce una lista a partire dall'elemento in posizione n (a partire da 0)
 
-//SORT
+//ORDINAMENTO
 void sortList(list* l); //Funzione da utilizzare per l'ordinamento di una lista
 list mergeList(list a, list b); //Funzioni di appoggio per sortList
 void splitList(list l, list* prima, list* seconda); //Funzioni di appoggio per sortList
