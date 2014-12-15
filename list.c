@@ -80,7 +80,7 @@ boolean inList(type_list el, list l)
 {
 	while (!empty(l)) 
 	{
-		if (el == head(l))
+		if ( type_listEquals(el,head(l)) )
 			return TRUE;
 		else
 			l = tail(l);
@@ -127,7 +127,7 @@ list deleteNode(type_list el, list l)
 {
 	if (empty(l))
 		return emptyList();
-	else if (el == head(l)) 
+	else if ( type_listEquals(el, head(l))) 
 		return copyList(tail(l));
 	else 
 		return cons(head(l), deleteNode(el, tail(l)));

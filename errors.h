@@ -1,7 +1,7 @@
-#include <stdio.h>
-
 #ifndef ERROR_H
 #define ERROR_H
+
+#include <stdio.h>
 
 #define MALLOC_ERR 1
 #define FOPEN_ERR 2

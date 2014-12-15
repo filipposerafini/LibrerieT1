@@ -121,7 +121,7 @@ boolean compareUnordered(type_arr arr1[], int dim1, type_arr arr2[], int dim2)
 }
 
 //ORDINAMENTO
-void naiveSort(int arr[], int dim)
+void naiveSort(type_arr arr[], int dim)
 {
     int p;
     while (dim>1) {
@@ -136,9 +136,10 @@ void quickSort(int a[], int dim)
     quickSortR(a, 0, dim - 1);
 }
 
-void quickSortR(int a[], int iniz, int fine)
+void quickSortR(type_arr a[], int iniz, int fine)
 {
-    int i, j, iPivot, pivot;
+	int i, j, iPivot;
+	type_arr pivot;
     
     if (iniz < fine)
     {

@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include "common.h"
+#include "element.h"
 
 //Ricerca
 int searchFirst(type_arr arr[], int dim, type_arr el); //Resistuisce la prima posizione dell'elemento el nell'array, -1 se non è presente

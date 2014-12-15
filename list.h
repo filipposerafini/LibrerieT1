@@ -32,7 +32,7 @@ list intersectList(list l1, list l2);// Riceve due liste e restituisce una nuova
 list diffList(list l1, list l2);//Restituisce una nuova lista contenente i valori presenti in l1 che NON sono presenti in l2 senza ripetizioni
 
 //ORDINAMENTO
-void sortList(list* l); //Funzione da utilizzare per l'ordinamento di una lista
+void sortList(list* l); //Funzione da utilizzare per l'ordinamento di una lista//////////ATTENZIONE passare indirizzo con &
 list mergeList(list a, list b); //Funzioni di appoggio per sortList
 void splitList(list l, list* prima, list* seconda); //Funzioni di appoggio per sortList
 
