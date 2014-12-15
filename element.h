@@ -6,16 +6,18 @@
 
 #include "common.h"
 
-#define FORMAT_TA "%d;%s;%c\n" //stringa di formato per type_arr  //TODO//
-#define FORMAT_TL "%d;%s;%c" //stringa di formato per type_list	  //TODO//
+#define FORMAT_TA "%s %d %d\n" //stringa di formato per type_arr  //TODO//
+#define FORMAT_TL "%s %d %d\n" //stringa di formato per type_list	  //TODO//
 
 //DEFINIZIONE DEI TIPI
-typedef struct
-{
-	int i;
-	char c;
-	char s[30];
-} element; //Sostituire con il tipo voluto  //TODO//
+
+typedef struct {
+	char nome[256];
+	int giorno;
+	int ore;
+} trasloco;
+
+typedef trasloco element; //Sostituire con il tipo voluto  //TODO//
 
 typedef element type_arr; //sostituire con il tipo voluto  //TODO//
 typedef element type_list; //sostituire con il tipo voluto  //TODO//

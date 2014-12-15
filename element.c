@@ -5,7 +5,21 @@
 
 int elementCompare(element a, element b) //TODO//
 {
-	return (a.c - b.c);
+	if (a.giorno != b.giorno)
+	{
+		return a.giorno - b.giorno;
+	}
+	else
+	{
+		if (a.ore != b.ore)
+		{
+			return a.ore - b.ore;
+		}
+		else
+		{
+			return strcmp(a.nome, b.nome);
+		}
+	}
 
 	//Per numeri e char
 	// return a-b;
@@ -15,7 +29,7 @@ int elementCompare(element a, element b) //TODO//
 
 boolean elementEquals(element a, element b) //TODO//
 {
-	return (a.c == b.c && a.i == b.i && strcmp(a.s, b.s) == 0); //DA MODIFICARE A SECONDA DI ELEMENT
+	return (a.giorno == b.giorno && a.ore == b.ore && (strcmp( a.nome, b.nome ) == 0 ) ); //DA MODIFICARE A SECONDA DI ELEMENT
 }
 
 int type_arrCompare(type_arr a, type_arr b) //TODO//
@@ -70,12 +84,12 @@ void type_listSwap(type_list *a, type_list *b)
 
 void type_listFPrint(FILE* f, type_list a) //TODO//
 {
-	fprintf(f, FORMAT_TL, a.i, a.s, a.c); //CAMBIARE LE VARIABILI
+	fprintf(f, FORMAT_TL, a.nome, a.giorno, a.ore); //CAMBIARE LE VARIABILI
 }
 
 void type_arrFPrint(FILE* f, type_arr a) //TODO//
 {
-	fprintf(f, FORMAT_TA, a.i, a.s, a.c); //CAMBIARE LE VARIABILI
+	fprintf(f, FORMAT_TA, a.nome, a.giorno, a.ore); //CAMBIARE LE VARIABILI
 }
 
 void type_listPrint(type_list a)
