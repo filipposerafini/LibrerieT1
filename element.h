@@ -7,8 +7,8 @@
 
 #include "common.h"
 
-#define FORMAT_TA "% " //stringa di formato per type_arr    //TODO//
-#define FORMAT_TL "% " //stringa di formato per type_list	  //TODO//
+#define FORMAT_TA "%d" //stringa di formato per type_arr    //TODO//
+#define FORMAT_TL "%d" //stringa di formato per type_list	  //TODO//
 
 //DEFINIZIONE DEI TIPI
 
