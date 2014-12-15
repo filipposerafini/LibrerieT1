@@ -1,3 +1,22 @@
+// Matricola:
+// Nome:
+//                 ERRORS
+//                   |
+//                 COMMON
+//                   |
+//           -----------------
+//           |               |
+//        ELEMENT            |
+//           |               |
+//      -----------          |
+//      |         |          |
+//    ARRAY      LIST       FILE
+//      |         |          |
+//      ----------------------
+//                |
+//               MAIN
+
+
 #include "list.h"
 #include "array.h"
 #include "file.h"
@@ -25,18 +44,10 @@ void printEl(element a)
 
 int main() 
 {
-	int i;
-	element a;
-	list l = emptyList();
+	list l;
 
-	for (i = 0; i < 30; i++)
-	{
-		a = casualEl();
-		l = cons(a, l);
-	}
-		
+	l = cons(casualEl(), cons(casualEl(), cons(casualEl(), cons(casualEl(), emptyList()))));
 	showList(l);
-	printf("\n\n\n");
 
 	sortList(&l);
 	showList(l);

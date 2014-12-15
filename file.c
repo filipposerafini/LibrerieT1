@@ -1,3 +1,6 @@
+// Matricola:
+// Nome:
+
 #include "file.h"
 
 FILE* openFile(char* nomeFile, char* modo)

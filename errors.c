@@ -1,3 +1,6 @@
+// Matricola:
+// Nome:
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "errors.h"

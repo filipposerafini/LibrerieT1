@@ -1,8 +1,11 @@
+// Matricola:
+// Nome:
+
 #include "element.h"
 
 int elementCompare(element a, element b)
 {
-	return a.c - b.c;
+	return (a.c - b.c);
 
 	//Per numeri e char
 	// return a-b;
@@ -78,4 +81,3 @@ void type_arrPrint(type_arr a)
 {
 	type_arrFPrint(stdout, a);
 }
-

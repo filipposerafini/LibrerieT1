@@ -1,3 +1,6 @@
+// Matricola:
+// Nome:
+
 #include "array.h"
 
 int searchFirst(type_arr arr[], int dim, type_arr el)
@@ -129,6 +132,71 @@ void naiveSort(type_arr arr[], int dim)
         if (p < dim-1) type_arrSwap(&arr[p], &arr[dim-1]);
         dim--;
     }
+}
+
+void bubbleSort(type_arr v[], int n)
+{
+	int i;
+	boolean ordinato = FALSE;
+
+	while (n > 1 && !ordinato)
+	{
+		ordinato = TRUE;
+		for (i = 0; i < (n - 1); i++)
+		{
+			if (type_arrCompare(v[i], v[i + 1]) > 0)
+			{
+				type_arrSwap(&v[i], &v[i + 1]);
+				ordinato = FALSE;
+			}
+		}
+			n--;		
+	}}
+
+void insertSort(type_arr v[], int n)
+{
+	int k;
+	for (k = 1; k < n; k++)
+		insOrd(v, k);
+}
+
+void insOrd(type_arr v[], int pos)
+{
+	int i = pos - 1;
+	type_arr x = v[pos];
+	while (i >= 0 && (type_arrCompare(x, v[i]) < 0))
+	{
+		v[i + 1] = v[i]; /* crea lo spazio */
+		i--;
+	}
+	v[i + 1] = x; /* inserisce l’elemento */
+}
+
+void merge(type_arr v[], int i1, int i2, int fine, type_arr vout[]) 
+{
+	int i = i1, j = i2, k = i1;
+	while (i <= i2 - 1 && j <= fine)
+	{
+		if (type_arrCompare(v[i], v[j]) < 0)
+			vout[k] = v[i++];
+		else
+			vout[k] = v[j++];
+		k++;
+	}
+	while (i <= i2 - 1) { vout[k] = v[i++]; k++; }
+	while (j <= fine) { vout[k] = v[j++]; k++; }
+	for (i = i1; i <= fine; i++) v[i] = vout[i];
+}
+
+void mergeSort(type_arr v[], int first, int last, type_arr vout[]) 
+{
+	int mid;
+	if (first < last) {
+		mid = (last + first) / 2;
+		mergeSort(v, first, mid, vout);
+		mergeSort(v, mid + 1, last, vout);
+		merge(v, first, mid + 1, last, vout);
+	}
 }
 
 void quickSort(int a[], int dim)

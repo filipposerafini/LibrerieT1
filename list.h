@@ -1,4 +1,6 @@
-#include "common.h"
+// Matricola:
+// Nome:
+
 #include "element.h"
 
 #ifndef LIST_H

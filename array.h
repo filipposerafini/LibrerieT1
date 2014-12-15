@@ -1,8 +1,10 @@
+// Matricola:
+// Nome:
+
 #ifndef ARRAY_H
 #define ARRAY_H
 
 #include <stdio.h>
-#include "common.h"
 #include "element.h"
 
 //Ricerca
@@ -20,6 +22,9 @@ boolean compareUnordered(type_arr arr1[], int dim1, type_arr arr2[], int dim2); 
 
 //Ordinamento
 void naiveSort(int arr[], int dim);
+void bubbleSort(type_arr v[], int n);
+void insOrd(type_arr v[], int pos);
+void insertSort(type_arr v[], int n);
 void quickSort(int a[], int dim);
 void quickSortR(int a[], int iniz, int fine);
 
