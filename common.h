@@ -1,5 +1,6 @@
-// Matricola:
 // Nome:
+// Cognome:
+// Matricola:
 
 #ifndef COMMON_H
 #define COMMON_H
@@ -11,5 +12,7 @@
 #include "errors.h"
 
 typedef enum { FALSE, TRUE } boolean;
+
+int readField(char buffer[], char sep, FILE *f);
 
 #endif

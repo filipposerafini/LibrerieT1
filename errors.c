@@ -1,5 +1,6 @@
-// Matricola:
 // Nome:
+// Cognome:
+// Matricola:
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -9,7 +10,6 @@ char* errorMessages[] =
 {
     "",
     "Errore nell'allocazione di memoria\n",
-    "Errore nell'apertura del file\n",
     "Errore nell'apertura del file in scrittura\n",
     "Errore nell'apertura del file in lettura\n",
     "Tentativo di accesso a una lista vuota\n",
