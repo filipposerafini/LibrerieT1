@@ -21,8 +21,8 @@ int handleError(int err)
     return err;
 }
 
-int exitWithError(int err)
+void exitWithError(int err)
 {
-    exit(handleError(err));
-    return err;
+	handleError(err);
+	exit(err);
 }

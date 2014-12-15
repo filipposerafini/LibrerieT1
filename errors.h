@@ -13,6 +13,6 @@
 #define INVALID_ACCESS 5
 
 int handleError(int err);
-int exitWithError(int err);
+void exitWithError(int err);
 
-#endif /* defined(__LibrerieT1__errors__) */
+#endif

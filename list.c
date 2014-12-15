@@ -179,6 +179,11 @@ list diffList(list l1, list l2) {
 	return difference;
 }
 
+list removeRepetitionList(list l)
+{
+	return intersectList(l, l);
+}
+
 /* void sortList(list* l)
 * -----------------------
 * Implementazione di mergeSort per le liste.

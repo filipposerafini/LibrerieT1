@@ -32,6 +32,7 @@ list deleteNode(type_list el, list l); //Crea una nuova lista senza l'elemento e
 list subList(int n, list l); //Restituisce una lista a partire dall'elemento in posizione n (a partire da 0)
 list intersectList(list l1, list l2);// Riceve due liste e restituisce una nuova lista contenente i valori presenti in entrambe senza ripetizioni
 list diffList(list l1, list l2);//Restituisce una nuova lista contenente i valori presenti in l1 che NON sono presenti in l2 senza ripetizioni
+list removeRepetitionList(list l);//Restituisce una nuova lista senza ripetizioni
 
 //ORDINAMENTO
 void sortList(list* l); //Funzione da utilizzare per l'ordinamento di una lista//////////ATTENZIONE passare indirizzo con &

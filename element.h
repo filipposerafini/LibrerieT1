@@ -6,8 +6,8 @@
 
 #include "common.h"
 
-#define FORMAT_TA "%d %c %s\n" //stringa di formato per type_arr
-#define FORMAT_TL "%d %c %s" //stringa di formato per type_list	
+#define FORMAT_TA "%d;%s;%c\n" //stringa di formato per type_arr  //TODO//
+#define FORMAT_TL "%d;%s;%c" //stringa di formato per type_list	  //TODO//
 
 //DEFINIZIONE DEI TIPI
 typedef struct
@@ -15,10 +15,10 @@ typedef struct
 	int i;
 	char c;
 	char s[30];
-} element; //Sostituire int con il tipo voluto
+} element; //Sostituire con il tipo voluto  //TODO//
 
-typedef element type_arr; //sostituire int con il tipo voluto
-typedef element type_list; //sostituire int con il tipo voluto
+typedef element type_arr; //sostituire con il tipo voluto  //TODO//
+typedef element type_list; //sostituire con il tipo voluto  //TODO//
 
 //Element
 int elementCompare(element a, element b);
