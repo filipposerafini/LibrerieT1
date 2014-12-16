@@ -14,11 +14,12 @@
 //              |         |
 //              -----------
 //                   |
+//                FUNCTION
+//                   |
 //                  MAIN
 
 
-#include "list.h"
-#include "array.h"
+#include "function.h"
 
 int main() 
 {

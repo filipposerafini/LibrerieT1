@@ -32,7 +32,7 @@ void type_arrFPrint(FILE* stream, type_arr a);
 int type_listCompare(type_list a, type_list b);
 boolean type_listEquals(type_list a, type_list b);
 void type_listSwap(type_list *a, type_list *b);
-void type_listPrint(type_arr a);
-void type_listFPrint(FILE* stream, type_arr a);
+void type_listPrint(type_list a);
+void type_listFPrint(FILE* stream, type_list a);
 
 #endif 
