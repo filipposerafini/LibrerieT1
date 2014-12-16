@@ -1,10 +1,8 @@
-// Nome:
-// Cognome:
-// Matricola:
+// Nome: Filippo
+// Cognome: Serafini
+// Matricola: 0000723678
 //
 //                ERRORS
-//                   |
-//                COMMON
 //                   |
 //                ELEMENT
 //                   |
@@ -14,16 +12,17 @@
 //              |         |
 //              -----------
 //                   |
-//                FUNCTION
+//            (MODULO D'ESAME)
 //                   |
 //                  MAIN
 
 
-#include "function.h"
+#include "list.h"
+#include "array.h"
 
 int main() 
 {
-
+	printf("Hello World!\n");
 
 	system("PAUSE");
 	return 0;

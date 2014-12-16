@@ -1,6 +1,6 @@
-// Nome:
-// Cognome:
-// Matricola:
+// Nome: Filippo
+// Cognome: Serafini
+// Matricola: 0000723678
 
 #include "array.h"
 
@@ -152,7 +152,8 @@ void bubbleSort(type_arr v[], int n)
 			}
 		}
 			n--;		
-	}}
+	}
+}
 
 void insertSort(type_arr v[], int n)
 {

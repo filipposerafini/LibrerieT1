@@ -1,11 +1,10 @@
-// Nome:
-// Cognome:
-// Matricola:
+// Nome: Filippo
+// Cognome: Serafini
+// Matricola: 0000723678
 
 #ifndef ARRAY_H
 #define ARRAY_H
 
-#include <stdio.h>
 #include "element.h"
 
 //Ricerca

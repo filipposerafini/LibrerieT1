@@ -1,6 +1,6 @@
-// Nome:
-// Cognome:
-// Matricola:
+// Nome: Filippo
+// Cognome: Serafini
+// Matricola: 0000723678
 
 #ifndef ERROR_H
 #define ERROR_H
