@@ -201,7 +201,7 @@ void mergeSort(type_arr v[], int first, int last, type_arr vout[])
 	}
 }
 
-void quickSort(int a[], int dim)
+void quickSort(type_arr a[], int dim)
 {
     quickSortR(a, 0, dim - 1);
 }

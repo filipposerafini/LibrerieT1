@@ -1,20 +1,6 @@
 // Nome: Filippo
 // Cognome: Serafini
 // Matricola: 0000723678
-//
-//                ERRORS
-//                   |
-//                ELEMENT
-//                   |
-//              -----------
-//              |         |
-//            ARRAY      LIST
-//              |         |
-//              -----------
-//                   |
-//            (MODULO D'ESAME)
-//                   |
-//                  MAIN
 
 
 #include "list.h"
