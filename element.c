@@ -23,7 +23,7 @@ void type_arrSwap(type_arr *a, type_arr *b)
 
 int type_listCompare(type_list a, type_list b) //TODO//
 {
-	
+
 }
 
 boolean type_listEquals(type_list a, type_list b) //TODO//

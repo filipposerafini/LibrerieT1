@@ -25,6 +25,8 @@ void naiveSort(type_arr arr[], int dim);
 void bubbleSort(type_arr v[], int n);
 void insOrd(type_arr v[], int pos);
 void insertSort(type_arr v[], int n);
+void merge(type_arr v[], int i1, int i2, int fine, type_arr vout[]);
+void mergeSort(type_arr v[], int first, int last, type_arr vout[]);
 void quickSort(type_arr a[], int dim);
 void quickSortR(type_arr a[], int iniz, int fine);
 
