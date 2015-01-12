@@ -36,6 +36,7 @@ list diffList(list l1, list l2);//Restituisce una nuova lista contenente i valor
 list removeRepetitionList(list l);//Restituisce una nuova lista senza ripetizioni
 
 //ORDINAMENTO
+list insordList(type_list el, list l); //Funzione di inserimento ordinato in una lista
 void sortList(list* l); //Funzione da utilizzare per l'ordinamento di una lista//////////ATTENZIONE passare indirizzo con &
 list mergeList(list a, list b); //Funzioni di appoggio per sortList
 void splitList(list l, list* prima, list* seconda); //Funzioni di appoggio per sortList

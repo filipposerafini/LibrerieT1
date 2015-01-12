@@ -187,6 +187,15 @@ list removeRepetitionList(list l)
 
 //ORDINAMENTO
 
+list insordList(type_list el, list l)
+{
+	if (empty(l)) 
+		return cons(el, l);
+	else if (type_listCompare(el, head(l)) <= 0)
+		return cons(el, l);
+	else 
+		return cons(head(l), insordList(el, tail(l)));
+}
 
 /* void sortList(list* l)
 * -----------------------
